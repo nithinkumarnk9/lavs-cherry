@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charsel="ut-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrap.min.css" rel="stylesheet">
+    <div class="row">
+<div class="column">
+<div class="card-body">
+<title>{% block title %}FlaskApp{% endblock %}</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"rel="stylesheet">
+<!--CustomCSS-->
+<link rel="stylesheet"href="css/style.css.html">
+<!--Backgroundimage-->
+<div class="bg-color"style=background-color:primary">
+</div>
+</div>
+</div>
+</body>
+        <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{ url_for('home') }}">CHERRY</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}">login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signup') }}">sign Up</a>
+                </li>
+            </ul>
+                <!-- Search Form -->
+                <form class="form-inline my-2my-lg-O" action="{{ url_for('search') }}" method="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="search" aria-label="Search" name="query">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+        </nav>
+    </div>
+
+<div class="container mt-5">
+    {% block content %}{% endblock %}
+</div>
+<footer class="footer bg-dark text-white mt-5 p-4 text-centre">
+    <div class="container">
+        <span>&copy; 2024 my webpage. All rights Reserved.</span>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

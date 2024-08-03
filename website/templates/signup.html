@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends "base2.html" %}
+    {% block title %}Signup{% endblock %}
+    {% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-4">Signup</h2>
+            <form method="POST"
+            action="{{ url_for('signup') }}">
+                <div class="form-group">
+                    <label for="username">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Signup</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</head>
+<body>
+
+</body>
+</html>

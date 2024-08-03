@@ -1,0 +1,151 @@
+{% extends "base2.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+  .navbar {
+     padding: 1rem 1rem;
+     }
+     .navbar-nav .nav-link {
+       color: #ffffff;
+       padding-left: 0.5rem;
+       padding-right: 0.5rem;
+       }
+       .navbar-nav .nav-link:hover {
+        color: #ffcc00;
+        }
+        .navbar-brand {
+        color: #ffffff;
+        }
+        .navbar-brand:hover {
+           color: #ffcc00;
+           }
+  h1 {
+  padding-left: 250px;
+  color:grey;
+  }
+  p {
+  padding-left: 50px;
+  }
+  h2 {
+  padding-left: 100px;
+  color:white;
+  }
+  body {
+      font-family: Arial, sans-serif;
+      background-color:#343a40;
+      }
+      section {
+       padding: 300px O;
+       }
+    .card {
+    border: 1px solid;
+        opacity: 1;
+        transition: .-5s ease;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 0.75rem;
+        padding:50px;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+  card-title {
+      font-size:1.30rem;
+      font-weight:bold;
+      margin-bottoms:10px;
+  .container:hover .middle {
+    opacity: 1;
+  }
+</style>
+<body>
+<!--About Section -->
+<section id="about" class="mt-5">
+<div class="container mt-5">
+  <div class="jumbotron">
+  <h1>WELCOME TO CHERRY</h1>
+  <p>This is about a beautiful girl. She knows anything and everything. She is clever. That girl named as Lavayana. She is from vishakapatnam. She is hardworking person and handles any situation. She is good girl. She is beautiful when compared to other girls without any markup. She is decent and anger also. She is naughty gril. His smile is very beautiful. </p>
+</div>
+  </div>
+  </section>
+<div class="container">
+  <h2>This is a categories and describle about the person.</h2>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card bg-primary text-white">
+        <div class="card-body">
+          <a href="{{ url_for('category1') }}" class="btn btn-primary btn-lg" role="button">FAVOURITE MUSIC</a>
+          <p class="card-text">This is about favourite music</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <a href="{{ url_for('category2') }}" class="btn btn-success btn-lg" role="button">FAVOURITE COLOR</a>
+          <p class="card-text">This is about favourite color</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card bg-info text-white">
+        <div class="card-body">
+          <a href="{{ url_for('category3') }}" class="btn btn-info btn-lg" role="button">FAVOURITE CARTOONS</a>
+          <p class="card-text">This is about favourite cartoons</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card bg-warning text-white">
+        <div class="card-body">
+          <a href="{{ url_for('category4') }}" class="btn btn-warning btn-lg" role="button">FAVOURITE FOOD</a>
+          <p class="card-text">This is about favourite food</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <a href="{{ url_for('category5') }}" class="btn btn-secondary btn-lg" role="button">FAVOURITE GAMES</a>
+          <p class="card-text">This is about favourite games</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card bg-light text-dark">
+        <div class="card-body">
+          <a href="{{ url_for('category6') }}" class="btn btn-light btn-lg" role="button">NICK NAME</a>
+          <p class="card-text">This is about nicknames.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<!-- Content section -->
+<section id="contact" class="mt-5">
+  <div class="container">
+    <h1>CONTACT ME</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"
+           class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3" required>
+        </textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</section>
+{% endblock %}
